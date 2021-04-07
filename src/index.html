@@ -22,17 +22,32 @@
                     React.createElement("p", {}, props.occupation)
                 ]
             )
+        };
+
+        class App extends React.Component {
+            render() {
+                return React.createElement(
+                    "div",
+                    {},
+                    React.createElement('h1', {}, 'REACT is RENDERED!'),
+                    React.createElement(Person, { name: 'Karu', occupation: 'developer' }),
+                    React.createElement(Person, { name: 'Karthik', occupation: 'student' }),
+                    React.createElement(Person)
+                )
+            }
         }
-        const App = () => {
-            return React.createElement(
-                "div",
-                {},
-                React.createElement('h1', {}, 'REACT is RENDERED!'),
-                React.createElement(Person, { name: 'Karu', occupation: 'developer' }),
-                React.createElement(Person, { name: 'Karthik', occupation: 'student' }),
-                React.createElement(Person)
-            )
-        }
+
+
+        // const App = () => {
+        //     return React.createElement(
+        //         "div",
+        //         {},
+        //         React.createElement('h1', {}, 'REACT is RENDERED!'),
+        //         React.createElement(Person, { name: 'Karu', occupation: 'developer' }),
+        //         React.createElement(Person, { name: 'Karthik', occupation: 'student' }),
+        //         React.createElement(Person)
+        //     )
+        // }
         ReactDOM.render(React.createElement(App), document.getElementById('root'))
     </script>
 </body>
